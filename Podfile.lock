@@ -1,0 +1,16 @@
+PODS:
+  - PLCrashReporter (1.2.0)
+
+DEPENDENCIES:
+  - PLCrashReporter
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PLCrashReporter
+
+SPEC CHECKSUMS:
+  PLCrashReporter: 16927d86a093d0b9cf110545dacb77cb0ed0f243
+
+PODFILE CHECKSUM: ef0d51c9fd87c02ce23df86d780f253b799d9a97
+
+COCOAPODS: 1.6.1

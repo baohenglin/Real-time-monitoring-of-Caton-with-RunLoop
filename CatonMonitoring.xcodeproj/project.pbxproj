@@ -1,0 +1,712 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		905BCBEA23152C4700EE9D9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCBE923152C4700EE9D9F /* AppDelegate.m */; };
+		905BCBED23152C4700EE9D9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCBEC23152C4700EE9D9F /* ViewController.m */; };
+		905BCBF023152C4700EE9D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905BCBEE23152C4700EE9D9F /* Main.storyboard */; };
+		905BCBF223152C4800EE9D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 905BCBF123152C4800EE9D9F /* Assets.xcassets */; };
+		905BCBF523152C4800EE9D9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 905BCBF323152C4800EE9D9F /* LaunchScreen.storyboard */; };
+		905BCBF823152C4800EE9D9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCBF723152C4800EE9D9F /* main.m */; };
+		905BCC0223152C4800EE9D9F /* CatonMonitoringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCC0123152C4800EE9D9F /* CatonMonitoringTests.m */; };
+		905BCC0D23152C4800EE9D9F /* CatonMonitoringUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCC0C23152C4800EE9D9F /* CatonMonitoringUITests.m */; };
+		905BCC1C23152CBA00EE9D9F /* HLCatonMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 905BCC1B23152CBA00EE9D9F /* HLCatonMonitor.m */; };
+		C1298E17511F17B349721731 /* libPods-CatonMonitoring.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D529BD605FA2465B86896E2 /* libPods-CatonMonitoring.a */; };
+		F09D44DB1BEAE7B06F3F8CD4 /* libPods-CatonMonitoringUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D89788768BE734656B6C6788 /* libPods-CatonMonitoringUITests.a */; };
+		F40131714F0906B28278BAA6 /* libPods-CatonMonitoringTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C198D11299AAEBBF89727758 /* libPods-CatonMonitoringTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		905BCBFE23152C4800EE9D9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 905BCBDD23152C4700EE9D9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 905BCBE423152C4700EE9D9F;
+			remoteInfo = CatonMonitoring;
+		};
+		905BCC0923152C4800EE9D9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 905BCBDD23152C4700EE9D9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 905BCBE423152C4700EE9D9F;
+			remoteInfo = CatonMonitoring;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020E78406FFADE69D2178CAF /* Pods-CatonMonitoringUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoringUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatonMonitoringUITests/Pods-CatonMonitoringUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1196BCA66D89D1A4A4280405 /* Pods-CatonMonitoringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoringTests.debug.xcconfig"; path = "Target Support Files/Pods-CatonMonitoringTests/Pods-CatonMonitoringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31038437F7AE2A972F4DD9DC /* Pods-CatonMonitoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoring.debug.xcconfig"; path = "Target Support Files/Pods-CatonMonitoring/Pods-CatonMonitoring.debug.xcconfig"; sourceTree = "<group>"; };
+		3D529BD605FA2465B86896E2 /* libPods-CatonMonitoring.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatonMonitoring.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7462165ED3CDC5DDAAF5B241 /* Pods-CatonMonitoringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoringTests.release.xcconfig"; path = "Target Support Files/Pods-CatonMonitoringTests/Pods-CatonMonitoringTests.release.xcconfig"; sourceTree = "<group>"; };
+		905BCBE523152C4700EE9D9F /* CatonMonitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatonMonitoring.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		905BCBE823152C4700EE9D9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		905BCBE923152C4700EE9D9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		905BCBEB23152C4700EE9D9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		905BCBEC23152C4700EE9D9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		905BCBEF23152C4700EE9D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		905BCBF123152C4800EE9D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		905BCBF423152C4800EE9D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		905BCBF623152C4800EE9D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		905BCBF723152C4800EE9D9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		905BCBFD23152C4800EE9D9F /* CatonMonitoringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatonMonitoringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		905BCC0123152C4800EE9D9F /* CatonMonitoringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatonMonitoringTests.m; sourceTree = "<group>"; };
+		905BCC0323152C4800EE9D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		905BCC0823152C4800EE9D9F /* CatonMonitoringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatonMonitoringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		905BCC0C23152C4800EE9D9F /* CatonMonitoringUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CatonMonitoringUITests.m; sourceTree = "<group>"; };
+		905BCC0E23152C4800EE9D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		905BCC1A23152CBA00EE9D9F /* HLCatonMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLCatonMonitor.h; sourceTree = "<group>"; };
+		905BCC1B23152CBA00EE9D9F /* HLCatonMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLCatonMonitor.m; sourceTree = "<group>"; };
+		99DC9BCD4644F3FF44DA3C8A /* Pods-CatonMonitoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoring.release.xcconfig"; path = "Target Support Files/Pods-CatonMonitoring/Pods-CatonMonitoring.release.xcconfig"; sourceTree = "<group>"; };
+		BA75EA0981B8B126D3EB04D3 /* Pods-CatonMonitoringUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatonMonitoringUITests.release.xcconfig"; path = "Target Support Files/Pods-CatonMonitoringUITests/Pods-CatonMonitoringUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C198D11299AAEBBF89727758 /* libPods-CatonMonitoringTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatonMonitoringTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D89788768BE734656B6C6788 /* libPods-CatonMonitoringUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CatonMonitoringUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		905BCBE223152C4700EE9D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1298E17511F17B349721731 /* libPods-CatonMonitoring.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCBFA23152C4800EE9D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F40131714F0906B28278BAA6 /* libPods-CatonMonitoringTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCC0523152C4800EE9D9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09D44DB1BEAE7B06F3F8CD4 /* libPods-CatonMonitoringUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40318CE0AEA721888BADEF96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D529BD605FA2465B86896E2 /* libPods-CatonMonitoring.a */,
+				C198D11299AAEBBF89727758 /* libPods-CatonMonitoringTests.a */,
+				D89788768BE734656B6C6788 /* libPods-CatonMonitoringUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BCAEF52EFD80B1D4718A75F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31038437F7AE2A972F4DD9DC /* Pods-CatonMonitoring.debug.xcconfig */,
+				99DC9BCD4644F3FF44DA3C8A /* Pods-CatonMonitoring.release.xcconfig */,
+				1196BCA66D89D1A4A4280405 /* Pods-CatonMonitoringTests.debug.xcconfig */,
+				7462165ED3CDC5DDAAF5B241 /* Pods-CatonMonitoringTests.release.xcconfig */,
+				020E78406FFADE69D2178CAF /* Pods-CatonMonitoringUITests.debug.xcconfig */,
+				BA75EA0981B8B126D3EB04D3 /* Pods-CatonMonitoringUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		905BCBDC23152C4700EE9D9F = {
+			isa = PBXGroup;
+			children = (
+				905BCBE723152C4700EE9D9F /* CatonMonitoring */,
+				905BCC0023152C4800EE9D9F /* CatonMonitoringTests */,
+				905BCC0B23152C4800EE9D9F /* CatonMonitoringUITests */,
+				905BCBE623152C4700EE9D9F /* Products */,
+				7BCAEF52EFD80B1D4718A75F /* Pods */,
+				40318CE0AEA721888BADEF96 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		905BCBE623152C4700EE9D9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				905BCBE523152C4700EE9D9F /* CatonMonitoring.app */,
+				905BCBFD23152C4800EE9D9F /* CatonMonitoringTests.xctest */,
+				905BCC0823152C4800EE9D9F /* CatonMonitoringUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		905BCBE723152C4700EE9D9F /* CatonMonitoring */ = {
+			isa = PBXGroup;
+			children = (
+				905BCBE823152C4700EE9D9F /* AppDelegate.h */,
+				905BCBE923152C4700EE9D9F /* AppDelegate.m */,
+				905BCBEB23152C4700EE9D9F /* ViewController.h */,
+				905BCBEC23152C4700EE9D9F /* ViewController.m */,
+				905BCC1A23152CBA00EE9D9F /* HLCatonMonitor.h */,
+				905BCC1B23152CBA00EE9D9F /* HLCatonMonitor.m */,
+				905BCBEE23152C4700EE9D9F /* Main.storyboard */,
+				905BCBF123152C4800EE9D9F /* Assets.xcassets */,
+				905BCBF323152C4800EE9D9F /* LaunchScreen.storyboard */,
+				905BCBF623152C4800EE9D9F /* Info.plist */,
+				905BCBF723152C4800EE9D9F /* main.m */,
+			);
+			path = CatonMonitoring;
+			sourceTree = "<group>";
+		};
+		905BCC0023152C4800EE9D9F /* CatonMonitoringTests */ = {
+			isa = PBXGroup;
+			children = (
+				905BCC0123152C4800EE9D9F /* CatonMonitoringTests.m */,
+				905BCC0323152C4800EE9D9F /* Info.plist */,
+			);
+			path = CatonMonitoringTests;
+			sourceTree = "<group>";
+		};
+		905BCC0B23152C4800EE9D9F /* CatonMonitoringUITests */ = {
+			isa = PBXGroup;
+			children = (
+				905BCC0C23152C4800EE9D9F /* CatonMonitoringUITests.m */,
+				905BCC0E23152C4800EE9D9F /* Info.plist */,
+			);
+			path = CatonMonitoringUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		905BCBE423152C4700EE9D9F /* CatonMonitoring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 905BCC1123152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoring" */;
+			buildPhases = (
+				CD18DE7A66A59008CC1F22A8 /* [CP] Check Pods Manifest.lock */,
+				905BCBE123152C4700EE9D9F /* Sources */,
+				905BCBE223152C4700EE9D9F /* Frameworks */,
+				905BCBE323152C4700EE9D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatonMonitoring;
+			productName = CatonMonitoring;
+			productReference = 905BCBE523152C4700EE9D9F /* CatonMonitoring.app */;
+			productType = "com.apple.product-type.application";
+		};
+		905BCBFC23152C4800EE9D9F /* CatonMonitoringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 905BCC1423152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoringTests" */;
+			buildPhases = (
+				C5ED4F9C25DE58AE9AA266FA /* [CP] Check Pods Manifest.lock */,
+				905BCBF923152C4800EE9D9F /* Sources */,
+				905BCBFA23152C4800EE9D9F /* Frameworks */,
+				905BCBFB23152C4800EE9D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				905BCBFF23152C4800EE9D9F /* PBXTargetDependency */,
+			);
+			name = CatonMonitoringTests;
+			productName = CatonMonitoringTests;
+			productReference = 905BCBFD23152C4800EE9D9F /* CatonMonitoringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		905BCC0723152C4800EE9D9F /* CatonMonitoringUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 905BCC1723152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoringUITests" */;
+			buildPhases = (
+				F1A3DED1C158DECBCBE0F2AB /* [CP] Check Pods Manifest.lock */,
+				905BCC0423152C4800EE9D9F /* Sources */,
+				905BCC0523152C4800EE9D9F /* Frameworks */,
+				905BCC0623152C4800EE9D9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				905BCC0A23152C4800EE9D9F /* PBXTargetDependency */,
+			);
+			name = CatonMonitoringUITests;
+			productName = CatonMonitoringUITests;
+			productReference = 905BCC0823152C4800EE9D9F /* CatonMonitoringUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		905BCBDD23152C4700EE9D9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = BaoHenglin;
+				TargetAttributes = {
+					905BCBE423152C4700EE9D9F = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					905BCBFC23152C4800EE9D9F = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 905BCBE423152C4700EE9D9F;
+					};
+					905BCC0723152C4800EE9D9F = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 905BCBE423152C4700EE9D9F;
+					};
+				};
+			};
+			buildConfigurationList = 905BCBE023152C4700EE9D9F /* Build configuration list for PBXProject "CatonMonitoring" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 905BCBDC23152C4700EE9D9F;
+			productRefGroup = 905BCBE623152C4700EE9D9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				905BCBE423152C4700EE9D9F /* CatonMonitoring */,
+				905BCBFC23152C4800EE9D9F /* CatonMonitoringTests */,
+				905BCC0723152C4800EE9D9F /* CatonMonitoringUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		905BCBE323152C4700EE9D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				905BCBF523152C4800EE9D9F /* LaunchScreen.storyboard in Resources */,
+				905BCBF223152C4800EE9D9F /* Assets.xcassets in Resources */,
+				905BCBF023152C4700EE9D9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCBFB23152C4800EE9D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCC0623152C4800EE9D9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C5ED4F9C25DE58AE9AA266FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatonMonitoringTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD18DE7A66A59008CC1F22A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatonMonitoring-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A3DED1C158DECBCBE0F2AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatonMonitoringUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		905BCBE123152C4700EE9D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				905BCBED23152C4700EE9D9F /* ViewController.m in Sources */,
+				905BCC1C23152CBA00EE9D9F /* HLCatonMonitor.m in Sources */,
+				905BCBF823152C4800EE9D9F /* main.m in Sources */,
+				905BCBEA23152C4700EE9D9F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCBF923152C4800EE9D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				905BCC0223152C4800EE9D9F /* CatonMonitoringTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		905BCC0423152C4800EE9D9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				905BCC0D23152C4800EE9D9F /* CatonMonitoringUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		905BCBFF23152C4800EE9D9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 905BCBE423152C4700EE9D9F /* CatonMonitoring */;
+			targetProxy = 905BCBFE23152C4800EE9D9F /* PBXContainerItemProxy */;
+		};
+		905BCC0A23152C4800EE9D9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 905BCBE423152C4700EE9D9F /* CatonMonitoring */;
+			targetProxy = 905BCC0923152C4800EE9D9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		905BCBEE23152C4700EE9D9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				905BCBEF23152C4700EE9D9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		905BCBF323152C4800EE9D9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				905BCBF423152C4800EE9D9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		905BCC0F23152C4800EE9D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		905BCC1023152C4800EE9D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		905BCC1223152C4800EE9D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31038437F7AE2A972F4DD9DC /* Pods-CatonMonitoring.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8A54ES6H6;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = CatonMonitoring/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuangShiTongDa.cloudService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		905BCC1323152C4800EE9D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99DC9BCD4644F3FF44DA3C8A /* Pods-CatonMonitoring.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8A54ES6H6;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = CatonMonitoring/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.GuangShiTongDa.cloudService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		905BCC1523152C4800EE9D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1196BCA66D89D1A4A4280405 /* Pods-CatonMonitoringTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ERC839XSL4;
+				INFOPLIST_FILE = CatonMonitoringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FengQingYang.CatonMonitoringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatonMonitoring.app/CatonMonitoring";
+			};
+			name = Debug;
+		};
+		905BCC1623152C4800EE9D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7462165ED3CDC5DDAAF5B241 /* Pods-CatonMonitoringTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ERC839XSL4;
+				INFOPLIST_FILE = CatonMonitoringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FengQingYang.CatonMonitoringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatonMonitoring.app/CatonMonitoring";
+			};
+			name = Release;
+		};
+		905BCC1823152C4800EE9D9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 020E78406FFADE69D2178CAF /* Pods-CatonMonitoringUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ERC839XSL4;
+				INFOPLIST_FILE = CatonMonitoringUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FengQingYang.CatonMonitoringUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatonMonitoring;
+			};
+			name = Debug;
+		};
+		905BCC1923152C4800EE9D9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA75EA0981B8B126D3EB04D3 /* Pods-CatonMonitoringUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ERC839XSL4;
+				INFOPLIST_FILE = CatonMonitoringUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = FengQingYang.CatonMonitoringUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatonMonitoring;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		905BCBE023152C4700EE9D9F /* Build configuration list for PBXProject "CatonMonitoring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				905BCC0F23152C4800EE9D9F /* Debug */,
+				905BCC1023152C4800EE9D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		905BCC1123152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				905BCC1223152C4800EE9D9F /* Debug */,
+				905BCC1323152C4800EE9D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		905BCC1423152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				905BCC1523152C4800EE9D9F /* Debug */,
+				905BCC1623152C4800EE9D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		905BCC1723152C4800EE9D9F /* Build configuration list for PBXNativeTarget "CatonMonitoringUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				905BCC1823152C4800EE9D9F /* Debug */,
+				905BCC1923152C4800EE9D9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 905BCBDD23152C4700EE9D9F /* Project object */;
+}
