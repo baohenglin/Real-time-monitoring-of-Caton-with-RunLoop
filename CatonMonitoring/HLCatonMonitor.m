@@ -38,7 +38,7 @@
     }
     //创建信号量，参数表示信号量的初始值，如果小于0则会返回NULL
     dispatchSemaphore = dispatch_semaphore_create(0); //Dispatch Semaphore保证同步
-    //创建一个观察者runLoopObserver
+    //创建一个观察者的上下文 CFRunLoopObserverContext
     CFRunLoopObserverContext context = {0,(__bridge void*)self,NULL,NULL};
     /*
      CF_EXPORT CFRunLoopObserverRef CFRunLoopObserverCreate(CFAllocatorRef allocator, CFOptionFlags activities, Boolean repeats, CFIndex order, CFRunLoopObserverCallBack callout, CFRunLoopObserverContext *context);
@@ -50,17 +50,19 @@
      第5个参数callout：用于设置该observer的回调函数；
      第6个参数context：设置该observer的上下文
      */
+    // 创建观察者 runLoopObserver
     runLoopObserver = CFRunLoopObserverCreate(kCFAllocatorDefault,
                                               kCFRunLoopAllActivities,
                                               YES,
                                               0,
                                               &runLoopObserverCallBack,
                                               &context);
-    //将观察者添加到主线程runloop的common模式下的观察中
+    //将创建好的观察者 runLoopObserver 添加到主线程 runloop 的 kCFRunLoopCommonModes 模式下的观察中
     CFRunLoopAddObserver(CFRunLoopGetMain(), runLoopObserver, kCFRunLoopCommonModes);
-    //创建子线程监控
+    //创建一个持续的子线程专门用来监控主线程的 RunLoop 状态。
+    // dispatch_get_global_queue 全局并发队列
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        //子线程开启一个持续的loop用来进行实时监控。
+        //子线程开启一个持续的 loop 用来进行实时监控。
         while (YES) {
             /*
         dispatch_semaphore_wait：该方法首先会将信号量值减一，如果大于等于0就立即返回(不休眠)，否则等待信号量唤醒或者等待超时；当首次执行到dispatch_semaphore_wait方法时，由于此时信号量的初始值为0，减1之后值为-1，所以线程会进入休眠状态等待信号量唤醒。如果等待了20ms，仍然无法唤醒该线程，即超时，此时返回的semaphoreWait的值为非0；如果20ms的时间内信号量唤醒了该线程，则semaphoreWait=0。
@@ -76,29 +78,29 @@
                     self->runLoopActivity = 0;
                     return;
                 }
+                NSString *runloopStatusStr = @"";
+                if (self->runLoopActivity == kCFRunLoopEntry) {  // 即将进入RunLoop
+                    runloopStatusStr = @"kCFRunLoopEntry";
+                } else if (self->runLoopActivity == kCFRunLoopBeforeTimers) {    // 即将处理Timer
+                    runloopStatusStr = @"kCFRunLoopBeforeTimers";
+                } else if (self->runLoopActivity == kCFRunLoopBeforeSources) {   // 即将处理Source
+                    runloopStatusStr = @"kCFRunLoopBeforeSources";
+                } else if (self->runLoopActivity == kCFRunLoopBeforeWaiting) {   //即将进入休眠
+                    runloopStatusStr = @"kCFRunLoopBeforeWaiting";
+                } else if (self->runLoopActivity == kCFRunLoopAfterWaiting) {    // 刚从休眠中唤醒
+                    runloopStatusStr = @"kCFRunLoopAfterWaiting";
+                } else if (self->runLoopActivity == kCFRunLoopExit) {    // 即将退出RunLoop
+                    runloopStatusStr = @"kCFRunLoopExit";
+                } else if (self->runLoopActivity == kCFRunLoopAllActivities) {
+                    runloopStatusStr = @"kCFRunLoopAllActivities";
+                }
                 //两个runloop的状态，BeforeSources和AfterWaiting这两个状态区间时间能够检测到是否卡顿
             /*
                  问题1：为什么监控kCFRunLoopBeforeSources和kCFRunLoopAfterWaiting这两个RunLoop的状态就可以判断是否卡顿呢？
            答：因为RunLoop进入休眠之前(kCFRunLoopBeforeWaiting)会执行source0等方法，唤醒(kCFRunLoopAfterWaiting)后要接收mach_port消息。如果在执行source0或者接收mach_port消息的时候太耗时，那么就会导致卡顿。我们把kCFRunLoopBeforeSources作为执行Source0S等方法的开始时间点，将kCFRunLoopAfterWaiting作为接收mach_port消息的开始时间点，所以只需要监控这两个状态是否超过设定的时间阀值。如果连续超过3次或者5次那么就可以判断产生了卡顿。（如果监控kCFRunLoopBeforeWaiting状态，能执行到此状态，说明已经执行完了source0，所以无法监控source0的耗时长短。）
                  **/
                 if (self->runLoopActivity == kCFRunLoopBeforeSources || self->runLoopActivity == kCFRunLoopAfterWaiting) {
-                    NSString *runloopStatusStr = @"";
-                    if (self->runLoopActivity == kCFRunLoopEntry) {  // 即将进入RunLoop
-                        runloopStatusStr = @"kCFRunLoopEntry";
-                    } else if (self->runLoopActivity == kCFRunLoopBeforeTimers) {    // 即将处理Timer
-                        runloopStatusStr = @"kCFRunLoopBeforeTimers";
-                    } else if (self->runLoopActivity == kCFRunLoopBeforeSources) {   // 即将处理Source
-                        runloopStatusStr = @"kCFRunLoopBeforeSources";
-                    } else if (self->runLoopActivity == kCFRunLoopBeforeWaiting) {   //即将进入休眠
-                        runloopStatusStr = @"kCFRunLoopBeforeWaiting";
-                    } else if (self->runLoopActivity == kCFRunLoopAfterWaiting) {    // 刚从休眠中唤醒
-                        runloopStatusStr = @"kCFRunLoopAfterWaiting";
-                    } else if (self->runLoopActivity == kCFRunLoopExit) {    // 即将退出RunLoop
-                        runloopStatusStr = @"kCFRunLoopExit";
-                    } else if (self->runLoopActivity == kCFRunLoopAllActivities) {
-                        runloopStatusStr = @"kCFRunLoopAllActivities";
-                    }
-                //判断卡顿采用了“一个时间段内卡顿的次数累计大于N时才触发采集和上报”的判定策略。假设连续3次超时20ms认为卡顿(当然也包含了单次超时60ms)
+                //判断卡顿采用了“一个时间段内卡顿的次数累计大于 n 时才触发采集和上报”的判定策略。假设连续3次超时20ms认为卡顿(当然也包含了单次超时60ms)
                     //出现三次超时的话
                     if (++self->timeoutCount < ContinuousNumberOfCycles) {
                         NSLog(@"连续卡顿次数=%d*******%@",self->timeoutCount,runloopStatusStr);
@@ -106,7 +108,7 @@
                     }
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                         NSLog(@"monitor trigger--------卡卡卡卡");
-                        // 收集Crash信息也可用于实时获取各线程的调用堆栈
+                        // 收集导致卡顿的函数调用堆栈信息
                         [self collecteCatonMsgWithRunLoopStatus:runloopStatusStr];
                     });
                 } //end activity
@@ -165,6 +167,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     NSData *data = [crashReporter generateLiveReport];
     PLCrashReport *reporter = [[PLCrashReport alloc] initWithData:data error:NULL];
     NSString *report = [PLCrashReportTextFormatter stringValueForCrashReport:reporter withTextFormat:PLCrashReportTextFormatiOS];
+    // 将导致卡顿的堆栈信息上报服务端
     NSLog(@"---------卡顿信息%@\n%@\n--------------",runLoopStatus,report);
 }
 @end
